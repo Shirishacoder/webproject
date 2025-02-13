@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            background: linear-gradient(135deg, #d3b89e, #f7ede2);
+        }
+        img {
+            max-width: 100%; /* Ensures the image is responsive */
+            height: auto;
+        }
+        a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .search-bar-container {
+            margin: 40px 0 20px; /* Increased top margin to create space */
+        }
+        .search-bar {
+            width: 600px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar:focus {
+            outline: none;
+            border-color: blue;
+        }
+        .search-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: blue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .search-button:hover {
+            background-color: darkblue;
+        }
+        /* Header Section */
+        header {
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            height: 70px;
+        }
+        header .username {
+            font-size: 22px; /* Increased font size */
+            margin-right: 20px;
+        }
+        header button {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        header button:hover {
+            background-color: #5753d6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="07Oct24_Anis_Free_Upload___1_-removebg-preview.png" alt="Logo">
+        </div>
+        <div>
+            <span id="username-display" class="username"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>    <div class="search-bar-container">
+        <input type="text" class="search-bar" placeholder="Search for designers or locations...">
+        <button class="search-button" onclick="search()">Search</button>
+    </div>
+    <div>
+        <img src="https://i.pinimg.com/736x/92/e8/ef/92e8ef42fcb808772b3b4d1dd99a6ec6.jpg" alt="Centered Image">
+    </div>
+    <a href="degin.html">Back to home</a>
+    <a href="p14.html">View contact details</a>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = localStorage.getItem("username"); // Get username from localStorage
+            if (username) {
+                document.getElementById("username-display").innerText = `Hello, ${username}`; // Display username
+            } else {
+                window.location.href = "logo4.html"; // Redirect to login if username is missing
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("username"); // Clear username from localStorage
+            window.location.href = "lab1.html"; // Redirect to login page
+        }
+    </script>
+
+</body>
+</html>

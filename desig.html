@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #d3b89e, #f7ede2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header img {
+            height: 70px;
+            margin-left: 25px;
+        }
+
+        header .username {
+            font-size: 27px;
+            margin-left: 1100px;
+        }
+
+        header button {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        header button:hover {
+            background-color: #5753d6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .container1 {
+            max-width: 1200px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h2 {
+            color: #333;
+            margin: 0;
+        }
+
+        .profile-poster {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile-box,
+        .poster-box {
+            flex: 1;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            max-width: 550px;
+            height: 500px;
+        }
+
+        .profile-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 6cm;
+            height: 6cm;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .details p {
+            font-size: 20px;
+            margin: 5px 0;
+        }
+
+        .poster-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 90%;
+        }
+
+        .work-section {
+            margin-top: 20px;
+            margin-left: 24px;
+        }
+
+        .images-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .images-gallery img {
+            width: 370px;
+            height: 450px;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .images-gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .upload-work {
+            margin-top: 10px;
+        }
+
+        .upload-work label {
+            font-size: 23px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .upload-work input {
+            display: block;
+        }
+
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .social-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        .social-links a:hover {
+            color: #0056b3;
+        }
+
+        @media (max-width: 600px) {
+            .profile-poster {
+                flex-direction: column;
+            }
+
+            .images-gallery img {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="07Oct24_Anis_Free_Upload___1_-removebg-preview.png" alt="Logo">
+        </div>
+        <div class="username" id="usernameDisplay">Welcome, <span id="designerName">User</span></div>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h2>Designer Information</h2>
+        </div>
+
+        <div class="profile-poster">
+            <div class="profile-box">
+                <h2>Designer Details</h2>
+                <img id="profile-image" class="profile-image" alt="Profile Image">
+                <div id="designer-details" class="details"></div>
+            </div>
+
+            <div class="poster-box">
+                <h2>Designer Poster</h2>
+                <img id="poster-image" class="poster-image" alt="Poster Image">
+            </div>
+        </div>
+
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul id="skills-list"></ul>
+            <input type="text" id="new-skill" placeholder="Add a new skill">
+            <button onclick="addSkill()">Add Skill</button>
+        </div>
+
+        <div class="social-links">
+            <h3>Social Links</h3>
+            <a href="#" id="facebook-link">Facebook</a>
+            <a href="#" id="instagram-link">Instagram</a>
+            <a href="#" id="linkedin-link">LinkedIn</a>
+        </div>
+    </div>
+
+    <script>
+        // Add functionality to add new skills
+        const skillsList = document.getElementById('skills-list');
+        const newSkillInput = document.getElementById('new-skill');
+
+        function addSkill() {
+            const skill = newSkillInput.value.trim();
+            if (skill) {
+                const listItem = document.createElement('li');
+                listItem.textContent = skill;
+                skillsList.appendChild(listItem);
+                newSkillInput.value = '';
+            }
+        }
+
+        // Populate default social links
+        document.getElementById('facebook-link').href = 'https://facebook.com';
+        document.getElementById('instagram-link').href = 'https://instagram.com';
+        document.getElementById('linkedin-link').href = 'https://linkedin.com';
+
+        function logout() {
+            window.location.href = 'lab1.html';
+        }
+    </script>
+</body>
+</html>

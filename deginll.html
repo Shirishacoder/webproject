@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Information</title>
+    <style>
+        /* Body Styling with Animated Background */
+        body {
+            min-height: 100vh; /* Ensures proper scrolling support */
+            margin: 0;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Aligns content to the top */
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevents horizontal scrolling */
+align:center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        form {
+            max-width: 800px; /* Increased max width */
+            width: 100%;
+            margin: 30px auto; /* Adds space around the form */
+            padding: 30px; /* Increases padding for larger form appearance */
+            background-color: #ffffff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+            border-radius: 12px;
+            border: 1px solid #d0d8f0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        form:hover {
+            transform: scale(1.05); /* Slightly larger hover effect */
+        }
+
+        h2 {
+            text-align: center;
+            color: #3c6eaf;
+            font-weight: bold;
+            font-size: 28px; /* Larger heading */
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4a70b0;
+            font-size: 16px; /* Increased label font size */
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], input[type="file"] {
+            width: 100%;
+            padding: 12px; /* Larger input padding */
+            box-sizing: border-box;
+            border: 2px solid #c9daf6;
+            border-radius: 6px; /* Slightly larger border radius */
+            font-size: 16px; /* Increased font size */
+            background-color: #f7faff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3c6eaf;
+            background-color: #eef5ff;
+            box-shadow: 0 0 12px rgba(60, 110, 175, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 18px; /* Larger button padding */
+            background: linear-gradient(90deg, #5a85e8, #a6b8f7);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px; /* Increased button font size */
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(90deg, #3c6eaf, #819cd7);
+        }
+    </style></head>
+<body>
+<div>
+<form id="signup-form">
+
+<h2>Add Your work</h2>
+        <div class="form-group">
+            <label for="profile-image">Upload Profile Image:</label>
+            <input type="file" id="profile-image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="poster-image">Upload Poster Image:</label>
+            <input type="file" id="poster-image" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="work-images">Upload Work Images:</label>
+            <input type="file" id="work-images" accept="image/*" multiple required>
+        </div>
+        <button type="submit" onclick="redirectToSignUp1()">Submit</button>
+    </form>
+
+</div>
+<script>
+function redirectToSignUp1() {
+            window.location.href = "deginsp.html";
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Profile</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #d3b89e, #f7ede2);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #444;
+        }
+        h2, p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        /* Header Section */
+        header {
+width:100%;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            height: 70px;
+        }
+        header .username {
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        header button {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        header button:hover {
+            background-color: #5753d6;
+        }
+
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            width: 80%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin: 30px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('p5.jpg') no-repeat center center;
+            background-size: cover;
+            border: 5px solid #fff;
+            margin-right: 30px;
+        }
+        .profile-details h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        .profile-details p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Frames Section */
+        .frames-heading {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            color: #444;
+            text-align: center;
+        }
+        .frames-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+        }
+        .frame {
+            flex: 1 1 calc(25% - 30px);
+            margin: 15px;
+            max-width: calc(25% - 30px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Animation for Gradient Background */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div>
+            <img src="07Oct24_Anis_Free_Upload___1_-removebg-preview.png" alt="Logo">
+        </div>
+        <div>
+            <span id="username-display" class="username"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-image"></div>
+        <div class="profile-details">
+            <h2>Chandini Gupta</h2>
+            <p>Place: Bhimavaram</p>
+            <p>Address: Street Address</p>
+            <p>Email: <a href="mailto:designer@example.com">designer@example.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+    </div>
+    
+    <!-- Designer Portfolio Heading -->
+    <div class="frames-heading">Designer Portfolio</div>
+
+    <!-- Frames Section -->
+    <div class="frames-container">
+        <div class="frame">
+            <a href="content12.html">
+                <img src="https://i.pinimg.com/736x/1f/cc/d5/1fccd5beb0e4dd6a07b08fdede5b51aa.jpg" alt="Dress 1">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="content13.html">
+                <img src="https://i.pinimg.com/736x/43/62/f4/4362f42e5926b5bda9da69002701cc34.jpg" alt="Dress 2">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="content14.html">
+                <img src="https://i.pinimg.com/736x/75/90/99/759099f81a3cc32721c598b140670e54.jpg" alt="Dress 3">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="content15.html">
+                <img src="https://i.pinimg.com/736x/32/d1/4c/32d14cb659cd28b1ce2aab4cd7787b5e.jpg" alt="Dress 4">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="mp25.html">
+                <img src="https://i.pinimg.com/736x/a5/da/98/a5da982511f9a588c886bbe218d83da7.jpg" alt="Dress 5">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="mp26.html">
+                <img src="https://i.pinimg.com/736x/cc/05/dc/cc05dc8b41ba47d21b84e0e190a75958.jpg" alt="Dress 6">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="mp27.html">
+                <img src="https://i.pinimg.com/736x/49/b2/2f/49b22f89fc357ae48143b5f9a57d0eae.jpg" alt="Dress 7">
+            </a>
+        </div>
+        <div class="frame">
+            <a href="mp28.html">
+                <img src="https://i.pinimg.com/736x/5c/39/86/5c3986557b06b2b410ce6ad430c936ab.jpg" alt="Dress 8">
+            </a>
+        </div>
+    </div>
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="window.location.href='degin.html'" 
+            style="padding: 10px 20px; 
+                   font-size: 16px; 
+                   color: white; 
+                   background-color: blue; 
+                   border: none; 
+                   border-radius: 5px; 
+                   cursor: pointer;">
+        Back
+    </button>
+</div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = localStorage.getItem("username");
+            if (username) {
+                document.getElementById("username-display").innerText = `Hello, ${username}`;
+            } else {
+                window.location.href = "logo4.html";
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("username");
+            window.location.href = "lab1.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer Profile</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(135deg, #d3b89e, #f7ede2); /* Updated gradient */
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #444;
+        }
+        h2, p {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            width: 80%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin: 30px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: url('p3.jpg') no-repeat center center;
+            background-size: cover;
+            border: 5px solid #fff;
+            margin-right: 30px;
+        }
+        .profile-details h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        .profile-details p {
+            margin: 8px 0;
+            font-size: 16px;
+            color: #555;
+        }
+  /* Header Section */
+        header {
+width:100%;
+            background-color: #f8f9fa;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            height: 70px;
+        }
+        header .username {
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        header button {
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        header button:hover {
+            background-color: #5753d6;
+        }
+
+
+
+        /* Frames Section */
+        .frames-heading {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            color: #444;
+            text-align: center;
+        }
+        .frames-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+        }
+        .frame {
+            flex: 1 1 calc(25% - 30px); /* Flex for responsiveness */
+            margin: 15px;
+            max-width: calc(25% - 30px);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+        }
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents image distortion */
+            background-color: #fff;
+        }
+
+        /* Footer Section */
+        footer {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Animation for Gradient Background */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Header Section -->
+    <header>
+        <div>
+            <img src="07Oct24_Anis_Free_Upload___1_-removebg-preview.png" alt="Logo">
+        </div>
+        <div>
+            <span id="username-display" class="username"></span>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-image"></div>
+        <div class="profile-details">
+            <h2>Aastha gadde</h2>
+            <p>Place: vizag</p>
+            <p>Address: Street Address</p>
+            <p>Email: <a href="mailto:designer@example.com">designer@example.com</a></p>
+            <p>Phone: <a href="tel:123-456-7890">123-456-7890</a></p>
+        </div>
+    </div>
+    
+    <!-- Designer Portfolio Heading -->
+    <div class="frames-heading">Designer Portfolio</div>
+
+    <!-- Frames Section -->
+    <div class="frames-container">
+        <div class="frame">
+<a href="mp1.html">
+            <img src="https://i.pinimg.com/736x/10/90/34/109034a79c88df17ef1bee230422102b.jpg" alt="Dress 1">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp2.html">
+            <img src="https://i.pinimg.com/736x/71/99/ca/7199ca9f656f770e49d9c9cc3bc74aea.jpg" alt="Dress 2">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp3.html">
+            <img src="https://i.pinimg.com/736x/da/b0/85/dab0853bbad437ca4db4f18d6f549ec1.jpg" alt="Dress 3">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp4.html">
+            <img src="https://i.pinimg.com/736x/b5/64/17/b56417e6e5a3c970ee42b4f16c3910bd.jpg" alt="Dress 4">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp13.html">
+            <img src="https://i.pinimg.com/736x/49/71/1f/49711fcbed9b18b06342d73694adc8e9.jpg" alt="Dress 5">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp14.html">
+            <img src="https://i.pinimg.com/736x/04/07/5f/04075f93e8d58c31bead68971d885d8c.jpg" alt="Dress 6">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp15.html">
+            <img src="https://i.pinimg.com/736x/33/51/e2/3351e2260c91a159e094f954ea2cc556.jpg" alt="Dress 7">
+</a>
+        </div>
+        <div class="frame">
+<a href="mp17.html">
+            <img src="https://i.pinimg.com/736x/3a/65/fb/3a65fbb6a3add4a8ebe25df06cae75c4.jpg" alt="Dress 8">
+</a>
+        </div>
+    </div>
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="window.location.href='degin.html'" 
+            style="padding: 10px 20px; 
+                   font-size: 16px; 
+                   color: white; 
+                   background-color: blue; 
+                   border: none; 
+                   border-radius: 5px; 
+                   cursor: pointer;">
+        Back
+    </button>
+</div>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const username = localStorage.getItem("username"); // Get username from localStorage
+            if (username) {
+                document.getElementById("username-display").innerText = `Hello, ${username}`; // Display username
+            } else {
+                window.location.href = "logo4.html"; // Redirect to login if username is missing
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem("username"); // Clear username from localStorage
+            window.location.href = "lab1.html"; // Redirect to login page
+        }
+    </script>
+
+</body>
+</html>
